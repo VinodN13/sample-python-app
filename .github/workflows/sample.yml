@@ -20,13 +20,12 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: vinodn13/python:${{github.sha}} 
+          tags: vinodn13/python:latest
       - name: EXECUTE DOCKER COMMAND 
         uses: garygrossgarten/github-action-ssh@release
         with:
           host: ${{ secrets.HOST }} 
           username: ubuntu 
           privateKey: ${{ secrets.SSH_PRIVATE_KEY }} 
-          command: sudo docker service ls
-          #command: sudo docker service update --replicas 1 --image vinodn13/python:${{github.sha}} pyt_new
+         # command: sudo docker service update --replicas 1 --image vinodn13/python:${{github.sha}} pyt_new
 
