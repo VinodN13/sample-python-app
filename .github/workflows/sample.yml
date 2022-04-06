@@ -27,5 +27,5 @@ jobs:
           host: ${{ secrets.HOST }} 
           username: ubuntu 
           privateKey: ${{ secrets.SSH_PRIVATE_KEY }} 
-          command: sudo docker service update --replicas 2 --image vinodn13/python:${{github.sha}} pyt_new
+          command: sudo docker service update --replicas 1 --image vinodn13/python:${{github.sha}} pyt_new
 
