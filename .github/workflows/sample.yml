@@ -20,7 +20,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: vinodn13/python:latest
+          tags: vinodn13/python:${{github.sha}}
       - name: EXECUTE DOCKER COMMAND 
         uses: garygrossgarten/github-action-ssh@release
         with:
